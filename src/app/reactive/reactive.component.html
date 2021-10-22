@@ -24,8 +24,8 @@
             <input type="number" class="form-control" formControlName ="salary" name = "salary">
         </div>
         <div class="form-group">
-            <label>Business ID: </label>
-            <input type="text" class="form-control" formControlName = "businessId" name = "businessId">
+            <label>Password: </label>
+            <input type="password" class="form-control" formControlName = "password" name = "password">
         </div>
         
         <button (click)="show()" type="submit" class="btn btn-success">Show</button>
@@ -36,7 +36,7 @@
             <h3>Age - {{age.value | json}}</h3>
             <h3>Contact Number - {{number.value | json}}</h3>
             <h3>Salary - {{salary.value | json}}</h3>
-            <h3>Business ID - {{businessId.value | json}}</h3>
+            <h3>Password - {{password.value | json}}</h3>
             
         </div>
     </form>

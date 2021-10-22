@@ -9,10 +9,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ReactiveComponent implements OnInit {
 
   isShown=false;
-
+  
   name = new FormControl('',{
   });
-  businessId = new FormControl('',{
+  password = new FormControl('',{
+    validators: [Validators.required, Validators.minLength(6)]
   });
   address = new FormControl('',{
   });
@@ -26,7 +27,7 @@ export class ReactiveComponent implements OnInit {
 
   ngForm = new FormGroup({
     name: this.name,
-    businessId: this.businessId,
+    password: this.password,
     address: this.address,
     age: this.age,
     number: this.number,
@@ -40,6 +41,8 @@ export class ReactiveComponent implements OnInit {
 
   onSubmit(){
     console.log(this.ngForm.controls.name.value);
+    console.log(this.ngForm.controls.password.value);
+  
   }
 
   show(){
